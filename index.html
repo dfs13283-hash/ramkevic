@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Плакат памяти: Рамкевич Сергей Матвеевич (1967–1985), воин-интернационалист">
+<title>Рамкевич Сергей Матвеевич</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Yeseva+One&display=swap">
+<style>
+:root{--red:#b3202f;--green:#2f6b3a;--bg:#f3ecdc;--paper:#fbf7ec;--ink:#2a2622;--soft:#6a6055;--line:#d9ccb0;--mem:#2f6b3a;--on-g:#fff;--on-r:#fff;--sh:0 8px 18px -12px rgba(60,40,10,.45);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--red:#d9505c;--green:#6fb27c;--bg:#1d1916;--paper:#27221e;--ink:#efe6d4;--soft:#b3a691;--line:#3d352d;--mem:#1f4a29;--on-g:#14110f;--on-r:#14110f;--sh:none;color-scheme:dark}}
+:root[data-theme="dark"]{--red:#d9505c;--green:#6fb27c;--bg:#1d1916;--paper:#27221e;--ink:#efe6d4;--soft:#b3a691;--line:#3d352d;--mem:#1f4a29;--on-g:#14110f;--on-r:#14110f;--sh:none;color-scheme:dark}
+html{scroll-padding-top:70px;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Lora,Georgia,serif;overflow-wrap:break-word}
+[data-lang="ru"] [lang="be"],[data-lang="be"] [lang="ru"]{display:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.orn{height:34px;width:100%;display:block}
+.orn rect:first-of-type{fill:var(--bg)}
+
+/* верхняя панель */
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:flex-end;gap:6px;padding:10px max(20px,calc((100% - 940px)/2));background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid transparent}
+.top button,.ctl button,.q button,.tabs button,.ctlbtn{font:600 15px Lora,serif;border:1.5px solid var(--green);background:none;color:var(--green);padding:6px 16px;cursor:pointer;border-radius:2px;min-height:38px}
+.top button[aria-pressed="true"],.tabs button[aria-selected="true"]{background:var(--green);color:var(--on-g)}
+.top button:hover,.ctl button:hover,.ctlbtn:hover{background:color-mix(in srgb,var(--green) 12%,transparent)}
+.top button[aria-pressed="true"]:hover{background:var(--green)}
+
+/* шапка */
+.hero{max-width:980px;margin:auto;padding:28px 20px 44px;display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center}
+.photo{border:2px solid var(--red);padding:10px;background:var(--paper);position:relative;box-shadow:var(--sh)}
+.photo img{display:block;width:100%;height:auto;filter:sepia(.25)}
+.photo::after{content:"";position:absolute;inset:4px;border:1px solid var(--line);pointer-events:none}
+#ph{cursor:zoom-in}
+h1{font:400 clamp(34px,6vw,58px)/1.1 "Yeseva One",Georgia,serif;margin:0 0 12px;color:var(--red);text-wrap:balance}
+.role{font-size:20px;color:var(--green);font-weight:600;margin:0 0 14px;line-height:1.4}
+.hero p{max-width:60ch}
+.dates{display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px;margin-top:20px}
+.dates b{display:block;font:400 28px "Yeseva One",Georgia,serif;color:var(--ink)}
+.dates span{color:var(--soft);font-size:15px}
+
+/* разделы */
+section{max-width:980px;margin:auto;padding:34px 20px}
+h2{font:400 30px/1.2 "Yeseva One",Georgia,serif;color:var(--green);margin:0 0 22px;text-wrap:balance}
+h2::after{content:"";display:block;width:64px;height:3px;margin-top:10px;background:linear-gradient(90deg,var(--red) 0 62%,var(--green) 62%)}
+.note{color:var(--soft);max-width:68ch;margin-top:0}
+.lead{font-size:19px;margin-top:0;max-width:68ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.cards.big{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--red);padding:16px 18px;box-shadow:var(--sh)}
+.card small{display:block;color:var(--soft);font-size:14px;line-height:1.4;margin-bottom:2px}
+.card strong{font-size:18px;line-height:1.4}
+.cards.big p{margin:8px 0 0;font-size:16px}
+
+/* хронология */
+.ctl{display:flex;gap:10px;margin:0 0 18px;flex-wrap:wrap}
+.tl{border-left:3px solid var(--red);margin-left:16px}
+.tl .it{position:relative;padding:0 0 14px 26px}
+.tl .it::before{content:"";position:absolute;left:-1.5px;top:19px;width:16px;height:16px;box-sizing:border-box;background:var(--bg);border:3px solid var(--red);transform:translate(-50%,-50%) rotate(45deg);transition:background .2s}
+.tl button{all:unset;cursor:pointer;display:block;width:100%;box-sizing:border-box;font:600 19px/1.4 Lora,serif;padding:6px 28px 6px 0;color:var(--ink);position:relative}
+.tl button::after{content:"+";position:absolute;right:4px;top:6px;color:var(--soft);font-weight:400}
+.tl .it.open button::after{content:"\2212"}
+.tl button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.tl button i{font-style:normal;color:var(--red);margin-right:10px;white-space:nowrap}
+.tl .more{display:none;background:var(--paper);border:1px solid var(--line);padding:12px 16px;margin-top:4px;max-width:70ch}
+.tl .it.open .more{display:block;animation:in .22s ease-out}
+.tl .it.open::before{background:var(--red)}
+@keyframes in{from{opacity:0;transform:translateY(-4px)}}
+
+/* слова знавших */
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tp{display:none;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--green);padding:8px 22px}
+.tp.on{display:block}
+.tp p{max-width:68ch}
+
+/* земляки и цифры */
+.five{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.five button{font:600 16px/1.4 Lora,serif;text-align:left;cursor:pointer;background:var(--paper);border:1px solid var(--line);border-bottom:4px solid var(--green);color:var(--ink);padding:14px}
+.five button.me{border-bottom-color:var(--red);box-shadow:var(--sh)}
+.five b{font-size:18px;display:block}
+.five em{display:none;font-style:normal;font-weight:400;font-size:15px;color:var(--soft);margin-top:6px}
+.five button.on em,.st .card.on em{display:block}
+.st .card{text-align:left;cursor:pointer;font:400 17px/1.5 Lora,serif;color:var(--ink)}
+.st b{display:block;font:400 32px/1.2 "Yeseva One",Georgia,serif;color:var(--red)}
+.st em{display:none;font-style:normal;font-size:15px;margin-top:6px}
+
+/* видео */
+.vid{display:inline-block;background:var(--red);color:var(--on-r);font:600 18px Lora,serif;padding:12px 28px;text-decoration:none;border-radius:2px}
+.vid:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.vframe{max-width:760px;margin:18px 0 0;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--green);padding:14px 14px 12px;box-shadow:var(--sh)}
+.vbox{position:relative;width:100%;aspect-ratio:16/9;background:#14110f;border:1px solid var(--line);outline:1px solid var(--line);outline-offset:3px}
+.vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vfb{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;text-align:center;background:var(--paper);color:var(--ink)}
+.vfb .pl{width:64px;height:64px;border-radius:50%;background:var(--red);position:relative}
+.vfb .pl::after{content:"";position:absolute;left:25px;top:18px;border-left:20px solid var(--on-r);border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vbox.blocked iframe{display:none}
+.vbox.blocked .vfb{display:flex}
+.vcap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;margin:12px 2px 0;font-size:15px;color:var(--soft)}
+.vcap a{color:var(--red);font-weight:600;text-underline-offset:3px}
+.vsec p{max-width:64ch}
+
+/* викторина */
+.q{background:var(--paper);border:1px solid var(--line);padding:14px 18px;margin-bottom:12px}
+.q p{margin:0 0 10px;font-weight:600}
+.a{display:flex;gap:10px;flex-wrap:wrap}
+.q button.ok{background:var(--green);color:var(--on-g)}
+.q button.no{background:var(--red);border-color:var(--red);color:var(--on-r)}
+.res{font:400 22px "Yeseva One",Georgia,serif;color:var(--red);min-height:1.4em;margin:14px 0 8px}
+
+/* свечи */
+.mem{background:var(--mem);color:#f7f2e4;text-align:center;padding:48px 20px}
+.mem p{max-width:640px;margin:0 auto;font:400 clamp(22px,3.5vw,30px)/1.4 "Yeseva One",Georgia,serif}
+#candles{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:30px auto 10px;max-width:640px;min-height:58px;align-items:flex-end}
+.cd{width:14px;height:44px;position:relative;background:#f3ecdc;border-radius:2px;margin-top:14px}
+.cd::before{content:"";position:absolute;left:3px;top:-14px;width:8px;height:14px;background:radial-gradient(#fff3a8,#f08a24);border-radius:50% 50% 50% 50%/65% 65% 35% 35%;animation:fl 1.2s infinite alternate;box-shadow:0 0 14px 3px rgba(240,138,36,.45)}
+@keyframes fl{to{transform:scale(.85,1.12) translateX(1px)}}
+.more-c{align-self:center;color:#f3ecdc;font-size:16px;margin-left:6px}
+.lt{font:600 17px Lora,serif;background:#f3ecdc;color:#2f6b3a;border:0;padding:11px 26px;cursor:pointer;border-radius:2px;margin-top:10px}
+.lt:focus-visible{outline-color:#fff}
+.cnt{margin-top:12px;font-size:16px}
+
+/* книга памяти */
+.book form{max-width:600px;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--green);padding:18px 20px;box-shadow:var(--sh)}
+.book label{display:block;font-weight:600;margin:0 0 4px}
+input,textarea{display:block;width:100%;margin:0 0 12px;padding:10px 12px;font:16px/1.5 Lora,serif;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:2px}
+textarea{resize:vertical;min-height:110px}
+input:focus,textarea:focus{border-color:var(--green)}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.cnt2{text-align:right;color:var(--soft);font-size:14px;margin:-8px 0 10px}
+.book .lt.g{background:var(--red);color:var(--on-r);margin:0}
+.book .lt.g:disabled{opacity:.6;cursor:wait}
+.fine{color:var(--soft);font-size:14px;line-height:1.5;margin:12px 0 0}
+#gm{min-height:1.5em;margin:10px 0 0;font-weight:600;color:var(--green)}
+#gm.err{color:var(--red)}
+#gb{margin-top:26px;max-width:680px}
+.gbi{border-left:4px solid var(--green);background:var(--paper);padding:12px 16px;margin-bottom:12px}
+.gbi p{margin:0 0 8px;white-space:pre-line;overflow-wrap:anywhere}
+.by{color:var(--soft);font-size:15px}
+.by b{color:var(--red)}
+.del{all:unset;cursor:pointer;color:var(--soft);font-size:15px;text-decoration:underline}
+.del:hover{color:var(--red)}
+.del:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+#gmore{margin-top:4px}
+[hidden]{display:none!important}
+
+footer{text-align:center;padding:10px 20px 30px;color:var(--soft);font-size:14px}
+
+/* просмотр фото */
+#lb{position:fixed;inset:0;background:rgba(15,12,10,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;border:6px solid #f3ecdc}
+#lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;font:600 18px Lora,serif;background:#f3ecdc;color:#2a2622;border:0;padding:8px 16px;cursor:pointer}
+
+@media (max-width:720px){
+ .hero{grid-template-columns:1fr;gap:24px;padding-bottom:30px}
+ .photo{max-width:260px;margin:auto}
+ section{padding:26px 16px}
+ h2{font-size:26px}
+ body{font-size:16.5px}
+}
+@media (prefers-reduced-motion:reduce){.cd::before,.tl .it.open .more{animation:none}}
+@media print{
+ .top,.ctl,.tabs,#quiz,.mem,.book form,#gmore,#lb,.vsec a,.vframe{display:none!important}
+ body{background:#fff;color:#000;font-size:12pt}
+ .tl .more,.tp{display:block!important;animation:none}
+ .five em,.st em{display:block!important}
+ section{padding:12px 0;break-inside:avoid-page}
+ .hero{padding-top:0}
+}
+</style>
+</head>
+<body>
+<svg class="orn" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><defs><pattern id="p" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M17 3 31 17 17 31 3 17Z" fill="none" stroke="#b3202f" stroke-width="2.5"/><path d="M17 11 23 17 17 23 11 17Z" fill="#b3202f"/><path d="M0 17h3M31 17h3" stroke="#2f6b3a" stroke-width="2.5"/></pattern></defs><rect width="100%" height="100%" fill="#f3ecdc"/><rect width="100%" height="100%" fill="url(#p)"/></svg>
+
+<div class="top" role="group" aria-label="Язык / Мова">
+<button id="bru" aria-pressed="true">Русский</button><button id="bbe" aria-pressed="false">Беларуская</button>
+</div>
+
+<header class="hero">
+<div class="photo"><img alt="Рамкевич Сергей Матвеевич" src="data:image/jpeg;base64,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" id="ph" tabindex="0" role="button" title="Увеличить / Павялічыць"></div>
+<div>
+<h1><span lang="ru">Рамкевич<br>Сергей Матвеевич</span><span lang="be">Рамкевіч<br>Сяргей Мацвеевіч</span></h1>
+<p class="role"><span lang="ru">Воин-интернационалист, водитель БТР, рядовой</span><span lang="be">Воін-інтэрнацыяналіст, кіроўца БТР, радавы</span></p>
+<p><span lang="ru">Уроженец деревни Кривоносы Стародорожского района Минской области, выпускник Кривоносовской средней школы. Погиб в Афганистане в восемнадцать лет, исполняя воинский долг.</span><span lang="be">Ураджэнец вёскі Крываносы Старадарожскага раёна Мінскай вобласці, выпускнік Крываносаўскай сярэдняй школы. Загінуў у Афганістане ва ўзросце васямнаццаці гадоў, выконваючы воінскі абавязак.</span></p>
+<div class="dates"><div><b>23.01.1967</b><span lang="ru">родился</span><span lang="be">нарадзіўся</span></div><div><b>29.08.1985</b><span lang="ru">погиб</span><span lang="be">загінуў</span></div><div><b id="yrs">41</b><span lang="ru">лет памяти</span><span lang="be">гадоў памяці</span></div></div>
+</div>
+</header>
+
+<section><h2><span lang="ru">Коротко о главном</span><span lang="be">Коратка пра галоўнае</span></h2><div class="cards"><div class="card"><small><span lang="ru">Родился</span><span lang="be">Нарадзіўся</span></small><strong><span lang="ru">23 января 1967 года, д. Кривоносы</span><span lang="be">23 студзеня 1967 года, в. Крываносы</span></strong></div><div class="card"><small><span lang="ru">Школа</span><span lang="be">Школа</span></small><strong><span lang="ru">Кривоносовская СШ, выпуск 1984 года</span><span lang="be">Крываносаўская СШ, выпуск 1984 года</span></strong></div><div class="card"><small><span lang="ru">Работа</span><span lang="be">Праца</span></small><strong><span lang="ru">Совхоз «Положевичи»</span><span lang="be">Саўгас «Палажэвічы»</span></strong></div><div class="card"><small><span lang="ru">Призван</span><span lang="be">Прызваны</span></small><strong><span lang="ru">16 апреля 1985 года, Стародорожский РВК</span><span lang="be">16 красавіка 1985 года, Старадарожскі РВК</span></strong></div><div class="card"><small><span lang="ru">Служба</span><span lang="be">Служба</span></small><strong><span lang="ru">Водитель БТР, в/ч п.п. 51932, Афганистан</span><span lang="be">Кіроўца БТР, в/ч п.п. 51932, Афганістан</span></strong></div><div class="card"><small><span lang="ru">Награды</span><span lang="be">Узнагароды</span></small><strong><span lang="ru">Орден Красной Звезды (посмертно), медаль «Воину-интернационалисту от благодарного афганского народа»</span><span lang="be">Ордэн Чырвонай Зоркі (пасмяротна), медаль «Воіну-інтэрнацыяналісту ад удзячнага афганскага народа»</span></strong></div></div></section>
+
+<section><h2><span lang="ru">Страницы жизни</span><span lang="be">Старонкі жыцця</span></h2>
+<div class="ctl"><button id="all"><span lang="ru">Раскрыть всё</span><span lang="be">Разгарнуць усё</span></button><button id="none"><span lang="ru">Свернуть всё</span><span lang="be">Згарнуць усё</span></button></div>
+<div class="tl"><div class="it"><button aria-expanded="false"><i>1967</i><span lang="ru">Родная деревня</span><span lang="be">Родная вёска</span></button><div class="more"><span lang="ru">Родился 23 января 1967 года в деревне Кривоносы Стародорожского района. Белорус, член ВЛКСМ. Мать — Евгения Ануфриевна. По воспоминаниям друга, Сергей рос без отца и с ранних лет помогал по хозяйству.</span><span lang="be">Нарадзіўся 23 студзеня 1967 года ў вёсцы Крываносы Старадарожскага раёна. Беларус, член ВЛКСМ. Маці — Яўгенія Ануфрыеўна. Паводле ўспамінаў сябра, Сяргей рос без бацькі і з ранніх гадоў дапамагаў па гаспадарцы.</span></div></div><div class="it"><button aria-expanded="false"><i>1984</i><span lang="ru">Школа и первая работа</span><span lang="be">Школа і першая праца</span></button><div class="more"><span lang="ru">В 1984 году окончил Кривоносовскую среднюю школу. Работал в совхозе «Положевичи» Стародорожского района, слесарем машинно-тракторного парка.</span><span lang="be">У 1984 годзе скончыў Крываносаўскую сярэднюю школу. Працаваў у саўгасе «Палажэвічы» Старадарожскага раёна, слесарам машынна-трактарнага парка.</span></div></div><div class="it"><button aria-expanded="false"><i>16.04.1985</i><span lang="ru">Призыв в армию</span><span lang="be">Прызыў у армію</span></button><div class="more"><span lang="ru">Стародорожский райвоенкомат призвал Сергея в Вооружённые Силы СССР. Службу он начал в селе Сельвочады (Грузия).</span><span lang="be">Старадарожскі райваенкамат прызваў Сяргея ў Узброеныя Сілы СССР. Службу ён пачаў у вёсцы Сельвачады (Грузія).</span></div></div><div class="it"><button aria-expanded="false"><i>07.1985</i><span lang="ru">В Афганистане</span><span lang="be">У Афганістане</span></button><div class="more"><span lang="ru">В июле 1985 года направлен в Афганистан, в войсковую часть полевая почта 51932 (181-й мотострелковый полк). Стал водителем колёсного БТР. Молодое пополнение водителей прибыло в роту в то же время.</span><span lang="be">У ліпені 1985 года накіраваны ў Афганістан, у вайсковую частку палявая пошта 51932 (181-ы матастралковы полк). Стаў кіроўцам колавага БТР. Маладое папаўненне кіроўцаў прыбыло ў роту ў той жа час.</span></div></div><div class="it"><button aria-expanded="false"><i>08.1985</i><span lang="ru">Саланг — Хайратон</span><span lang="be">Саланг — Хайратан</span></button><div class="more"><span lang="ru">В августе Сергей с группой товарищей сопровождал колонну машин через перевал Саланг до Хайратона, на границе Советского Союза. Колонну не раз обстреливали, многие товарищи погибли, а он вернулся в часть.</span><span lang="be">У жніўні Сяргей з групай таварышаў суправаджаў калону машын праз перавал Саланг да Хайратана, на мяжы Савецкага Саюза. Калону не раз абстрэльвалі, многія таварышы загінулі, а ён вярнуўся ў частку.</span></div></div><div class="it"><button aria-expanded="false"><i>29.08.1985</i><span lang="ru">День гибели</span><span lang="be">Дзень гібелі</span></button><div class="more"><span lang="ru">Поздним вечером, когда колонна вернулась в подразделение, душманы неожиданно начали обстрел. По данным Книги памяти 181-го полка, это был артиллерийский обстрел стоянки боевых машин. Снаряд разорвался в десяти метрах от места, где находился рядовой Рамкевич с товарищами. Он получил тяжёлое ранение в грудь и, не приходя в сознание, умер. Ему было 18 лет.</span><span lang="be">Позна ўвечары, калі калона вярнулася ў падраздзяленне, душманы нечакана пачалі абстрэл. Паводле Кнігі памяці 181-га палка, гэта быў артылерыйскі абстрэл стаянкі баявых машын. Снарад разарваўся ў дзесяці метрах ад месца, дзе знаходзіўся радавы Рамкевіч з таварышамі. Ён атрымаў цяжкае раненне ў грудзі і, не прыйшоўшы ў прытомнасць, памёр. Яму было 18 гадоў.</span></div></div><div class="it"><button aria-expanded="false"><i><span lang="ru">Дома</span><span lang="be">Дома</span></i><span lang="ru">Похоронен на родине</span><span lang="be">Пахаваны на радзіме</span></button><div class="more"><span lang="ru">Сергея похоронили в родной деревне Кривоносы. За мужество и героизм ему посмертно вручили орден Красной Звезды и медаль «Воину-интернационалисту от благодарного афганского народа».</span><span lang="be">Сяргея пахавалі ў роднай вёсцы Крываносы. За мужнасць і гераізм яму пасмяротна ўзнагародзілі ордэнам Чырвонай Зоркі і медалём «Воіну-інтэрнацыяналісту ад удзячнага афганскага народа».</span></div></div></div></section>
+
+<section><h2><span lang="ru">Слова тех, кто его знал</span><span lang="be">Словы тых, хто яго ведаў</span></h2>
+<div class="tabs"><button class="on" data-t="t1"><span lang="ru">Командир</span><span lang="be">Камандзір</span></button><button data-t="t2"><span lang="ru">Друг детства</span><span lang="be">Сябар дзяцінства</span></button></div>
+<div class="tp on" id="t1"><p><span lang="ru">Прапорщик Савинков, заместитель командира роты по технической части и земляк из Старых Дорог, писал ученикам Кривоносовской школы о своём подчинённом. БТР, который принял Сергей, сильно пострадал в одной из операций, и Сергей в короткий срок восстановил машину. Командование роты неоднократно ставило его в пример. Савинков восхищался им и говорил: «Молодец, земляк».</span><span lang="be">Прапаршчык Савінкаў, намеснік камандзіра роты па тэхнічнай частцы і зямляк са Старых Дарог, пісаў вучням Крываносаўскай школы пра свайго падначаленага. БТР, які прыняў Сяргей, моцна пацярпеў у адной з аперацый, і Сяргей у кароткі тэрмін аднавіў машыну. Камандаванне роты неаднаразова ставіла яго ў прыклад. Савінкаў захапляўся ім і казаў: «Малайчына, зямляк».</span></p>
+<p><span lang="ru">Сергей сопровождал колонны с нефтью, бензином и продовольствием по горным дорогам, где душманы устраивали засады. Работать приходилось при сорокаградусной жаре, а после рейса ещё нужно было обслужить машину. Савинков писал, что хотел бы принять участие в открытии уголка боевой славы в школе.</span><span lang="be">Сяргей суправаджаў калоны з нафтай, бензінам і правіянтам па горных дарогах, дзе душманы ладзілі засады. Працаваць даводзілася пры сарокаградуснай спёцы, а пасля рэйса трэба было яшчэ абслужыць машыну. Савінкаў пісаў, што хацеў бы ўдзельнічаць у адкрыцці куточка баявой славы ў школе.</span></p></div>
+<div class="tp" id="t2"><p><span lang="ru">Одноклассник и друг Сергея, С. Шашко, вспоминал, что всё детство они прошли вместе. Оба росли без отца, поэтому всю домашнюю работу делали сообща, и свою, и друга. Сергей не боялся трудностей и любил жизнь, был жизнерадостным и общительным.</span><span lang="be">Аднакласнік і сябар Сяргея, С. Шашко, успамінаў, што ўсё дзяцінства яны прайшлі разам. Абодва раслі без бацькі, таму ўсю хатнюю работу рабілі разам, і сваю, і сябра. Сяргей не баяўся цяжкасцей і любіў жыццё, быў жыццярадасным і таварыскім.</span></p>
+<p><span lang="ru">Больше всего он ценил в людях искренность и настойчивость, с уважением относился к старшим и прислушивался к их замечаниям. Друг назвал его человеком «большой, чистой и простой души» и написал, что такого помнят всю жизнь.</span><span lang="be">Больш за ўсё ён цаніў у людзях шчырасць і настойлівасць, з павагай ставіўся да старэйшых і прыслухоўваўся да іх заўваг. Сябар назваў яго чалавекам «вялікай, чыстай і простай душы» і напісаў, што такіх людзей памятаюць усё жыццё.</span></p></div>
+</section>
+
+<section><h2><span lang="ru">Как чтят память сегодня</span><span lang="be">Як шануюць памяць сёння</span></h2>
+<p class="lead"><span lang="ru">Память о Сергее Рамкевиче хранят в школе, в районе и в книгах памяти.</span><span lang="be">Памяць пра Сяргея Рамкевіча захоўваюць у школе, у раёне і ў кнігах памяці.</span></p>
+<div class="cards big">
+<div class="card"><strong><span lang="ru">Школьный музей</span><span lang="be">Школьны музей</span></strong><p><span lang="ru">В музее Кривоносовской школы шестой раздел посвящён воинам-интернационалистам. Среди погибших уроженцев Стародорожского района в нём назван выпускник школы Сергей Рамкевич, награждённый посмертно орденом Красной Звезды и медалью «Воину-интернационалисту от благодарного афганского народа».</span><span lang="be">У музеі Крываносаўскай школы шосты раздзел прысвечаны воінам-інтэрнацыяналістам. Сярод загінуўшых ураджэнцаў Старадарожскага раёна ў ім названы выпускнік школы Сяргей Рамкевіч, пасмяротна ўзнагароджаны ордэнам Чырвонай Зоркі і медалём «Воіну-інтэрнацыяналісту ад удзячнага афганскага народа».</span></p></div>
+<div class="card"><strong><span lang="ru">Митинг-реквием 15 февраля</span><span lang="be">Мітынг-рэквіем 15 лютага</span></strong><p><span lang="ru">Каждый год в День памяти воинов-интернационалистов жители Старых Дорог собираются у памятника воинам-афганцам. На митинг приходят руководство района, ветераны, родные погибших, представители трудовых коллективов и много школьников. Участники почитают память минутой молчания и возлагают гирлянду, венки и цветы к подножию памятника.</span><span lang="be">Штогод у Дзень памяці воінаў-інтэрнацыяналістаў жыхары Старых Дарог збіраюцца ля помніка воінам-афганцам. На мітынг прыходзяць кіраўніцтва раёна, ветэраны, сваякі загінуўшых, прадстаўнікі працоўных калектываў і шмат школьнікаў. Удзельнікі ўшаноўваюць памяць хвілінай маўчання і ускладаюць гірлянду, вянкі і кветкі да падножжа помніка.</span></p></div>
+<div class="card"><strong><span lang="ru">Книги памяти</span><span lang="be">Кнігі памяці</span></strong><p><span lang="ru">Имя Сергея записано в белорусской Книге памяти и в Книге памяти 181-го полка, где перечислены 608 погибших однополчан. Ветераны полка ведут сайт, на котором собраны биографии каждого из них.</span><span lang="be">Імя Сяргея запісана ў беларускай Кнізе памяці і ў Кнізе памяці 181-га палка, дзе пералічаны 608 загінуўшых аднапалчан. Ветэраны палка вядуць сайт, на якім сабраны біяграфіі кожнага з іх.</span></p></div>
+</div></section>
+
+<section class="vsec"><h2><span lang="ru">Видеоэкскурсия по музею</span><span lang="be">Відэаэкскурсія па музеі</span></h2><p><span lang="ru">Экскурсия по разделу музея Кривоносовской школы, посвящённому воинам-интернационалистам.</span><span lang="be">Экскурсія па раздзеле музея Крываносаўскай школы, прысвечаным воінам-інтэрнацыяналістам.</span></p><script>document.addEventListener("securitypolicyviolation",function(e){if(/frame|child/.test(e.violatedDirective)){var b=document.querySelector(".vbox");if(b)b.className+=" blocked"}});</script><div class="vframe"><div class="vbox"><iframe src="https://www.youtube-nocookie.com/embed/86M2Czxqtgc" title="Видеоэкскурсия по музею" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="vfb"><div class="pl" aria-hidden="true"></div><div><span lang="ru">Здесь видео показать не удалось</span><span lang="be">Тут відэа паказаць не ўдалося</span></div><a class="vid" href="https://youtu.be/86M2Czxqtgc" target="_blank" rel="noopener"><span lang="ru">Смотреть видеоэкскурсию на YouTube</span><span lang="be">Глядзець відэаэкскурсію на YouTube</span></a></div></div><div class="vcap"><span><span lang="ru">Видеоэкскурсия по музею Кривоносовской школы</span><span lang="be">Відэаэкскурсія па музеі Крываносаўскай школы</span></span><a href="https://youtu.be/86M2Czxqtgc" target="_blank" rel="noopener"><span lang="ru">Открыть на YouTube</span><span lang="be">Адкрыць на YouTube</span></a></div></div></section>
+<section><h2><span lang="ru">Пятеро земляков</span><span lang="be">Пяцёра землякоў</span></h2>
+<p class="note"><span lang="ru">Из Стародорожского района на афганскую войну ушли 130 человек, пятеро не вернулись домой. Нажмите на имя.</span><span lang="be">Са Старадарожскага раёна на афганскую вайну пайшлі 130 чалавек, пяцёра не вярнуліся дадому. Націсніце на імя.</span></p>
+<div class="five">
+<button><b><span lang="ru">Пётр Довнар</span><span lang="be">Пётр Доўнар</span></b><em><span lang="ru">старший лейтенант, командир десантно-штурмовой роты</span><span lang="be">старшы лейтэнант, камандзір дэсантна-штурмавой роты</span></em></button>
+<button><b><span lang="ru">Владимир Дудаль</span><span lang="be">Уладзімір Дудаль</span></b><em><span lang="ru">рядовой, старший разведчик</span><span lang="be">радавы, старшы разведчык</span></em></button>
+<button><b><span lang="ru">Виктор Новик</span><span lang="be">Віктар Новік</span></b><em><span lang="ru">рядовой, наводчик орудия</span><span lang="be">радавы, наводчык гарматы</span></em></button>
+<button class="me"><b><span lang="ru">Сергей Рамкевич</span><span lang="be">Сяргей Рамкевіч</span></b><em><span lang="ru">рядовой, водитель бронетранспортёра</span><span lang="be">радавы, кіроўца бронетранспарцёра</span></em></button>
+<button><b><span lang="ru">Александр Русакович</span><span lang="be">Аляксандр Русаковіч</span></b><em><span lang="ru">сержант, командир отделения</span><span lang="be">сяржант, камандзір аддзялення</span></em></button>
+</div></section>
+
+<section><h2><span lang="ru">Афганская война в цифрах</span><span lang="be">Афганская вайна ў лічбах</span></h2>
+<p class="note"><span lang="ru">С 27 декабря 1979 по 15 февраля 1989 года. Нажмите на число.</span><span lang="be">З 27 снежня 1979 па 15 лютага 1989 года. Націсніце на лічбу.</span></p>
+<div class="cards st">
+<button class="card"><b>~15 000</b><small><span lang="ru">советских воинов погибли</span><span lang="be">савецкіх воінаў загінулі</span></small><em><span lang="ru">ещё около 35 тысяч были ранены и искалечены</span><span lang="be">яшчэ каля 35 тысяч былі паранены і скалечаны</span></em></button>
+<button class="card"><b>~30 000</b><small><span lang="ru">белорусов служили в Афганистане</span><span lang="be">беларусаў служылі ў Афганістане</span></small><em><span lang="ru">они выполняли интернациональный долг</span><span lang="be">яны выконвалі інтэрнацыянальны абавязак</span></em></button>
+<button class="card"><b>771</b><small><span lang="ru">белорус погиб</span><span lang="be">беларус загінуў</span></small><em><span lang="ru">около двух десятков пропали без вести</span><span lang="be">каля двух дзесяткаў прапалі без вестак</span></em></button>
+<button class="card"><b>5</b><small><span lang="ru">погибших из Стародорожского района</span><span lang="be">загінуўшых са Старадарожскага раёна</span></small><em><span lang="ru">среди них выпускник Кривоносовской школы</span><span lang="be">сярод іх выпускнік Крываносаўскай школы</span></em></button>
+</div></section>
+
+<section id="quiz">
+<h2><span lang="ru">Проверьте, что вы запомнили</span><span lang="be">Праверце, што вы запомнілі</span></h2>
+<div class="q"><p><span lang="ru">Какую технику водил Сергей Рамкевич?</span><span lang="be">Якую тэхніку вадзіў Сяргей Рамкевіч?</span></p><div class="a"><button><span lang="ru">Танк</span><span lang="be">Танк</span></button><button data-ok="1"><span lang="ru">БТР</span><span lang="be">БТР</span></button><button><span lang="ru">Вертолёт</span><span lang="be">Верталёт</span></button></div></div>
+<div class="q"><p><span lang="ru">Какой наградой он отмечен посмертно?</span><span lang="be">Якой узнагародай ён адзначаны пасмяротна?</span></p><div class="a"><button><span lang="ru">Орден Славы</span><span lang="be">Ордэн Славы</span></button><button data-ok="1"><span lang="ru">Орден Красной Звезды</span><span lang="be">Ордэн Чырвонай Зоркі</span></button><button><span lang="ru">Орден Ленина</span><span lang="be">Ордэн Леніна</span></button></div></div>
+<div class="q"><p><span lang="ru">Когда он погиб?</span><span lang="be">Калі ён загінуў?</span></p><div class="a"><button><span lang="ru">31 января 1985</span><span lang="be">31 студзеня 1985</span></button><button data-ok="1"><span lang="ru">29 августа 1985</span><span lang="be">29 жніўня 1985</span></button><button><span lang="ru">15 февраля 1989</span><span lang="be">15 лютага 1989</span></button></div></div>
+<div class="res" id="res" aria-live="polite"></div>
+<button id="qr" class="ctlbtn" hidden><span lang="ru">Пройти ещё раз</span><span lang="be">Пройсці яшчэ раз</span></button>
+</section>
+
+<div class="mem">
+<p><span lang="ru">Помним. Гордимся. Не забудем.</span><span lang="be">Памятаем. Ганарымся. Не забудзем.</span></p>
+<div id="candles" aria-live="polite"></div>
+<button id="light" class="lt"><span lang="ru">Зажечь свечу памяти</span><span lang="be">Запаліць свечку памяці</span></button>
+<div class="cnt"><span lang="ru">Свечей зажжено:</span><span lang="be">Свечак запалена:</span> <b id="cn">0</b></div>
+</div>
+
+<section id="book" class="book">
+<h2><span lang="ru">Книга памяти</span><span lang="be">Кніга памяці</span></h2>
+<p class="note"><span lang="ru">Если вы знали Сергея, учились или жили рядом с ним, оставьте несколько слов. Имя и дата сохранятся вместе с записью.</span><span lang="be">Калі вы ведалі Сяргея, вучыліся ці жылі побач з ім, пакіньце некалькі слоў. Імя і дата захаваюцца разам з запісам.</span></p>
+<form id="gbf" novalidate>
+<label for="gn"><span lang="ru">Ваше имя</span><span lang="be">Ваша імя</span></label>
+<input id="gn" maxlength="60" autocomplete="name" required data-ru="Например, Иван Петров, одноклассник" data-be="Напрыклад, Іван Пятроў, аднакласнік">
+<label for="gt"><span lang="ru">Ваша запись</span><span lang="be">Ваш запіс</span></label>
+<textarea id="gt" rows="4" maxlength="800" required data-ru="Что вы помните о Сергее" data-be="Што вы памятаеце пра Сяргея"></textarea>
+<div class="cnt2"><span id="gc">0</span> / 800</div>
+<input class="hp" id="gh" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="lt g" id="gs" type="submit"><span lang="ru">Оставить запись</span><span lang="be">Пакінуць запіс</span></button>
+<p id="gm" role="status" aria-live="polite"></p>
+<p class="fine" id="gnote"></p>
+</form>
+<div id="gb"></div>
+<button id="gmore" class="ctlbtn" hidden><span lang="ru">Показать ещё</span><span lang="be">Паказаць яшчэ</span></button>
+</section>
+
+
+<svg class="orn" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#f3ecdc"/><rect width="100%" height="100%" fill="url(#p)"/></svg>
+<footer><span lang="ru">Плакат памяти земляка</span><span lang="be">Плакат памяці земляка</span></footer>
+
+<div id="lb"><button id="cl">&times;</button><img alt=""></div>
+<script>
+(function(){
+'use strict';
+
+/* ================= НАСТРОЙКИ КНИГИ ПАМЯТИ =================
+   GB_ENDPOINT — адрес веб-приложения Google Apps Script (см. README).
+   Пока он пустой, записи хранятся только в браузере посетителя.
+   GB_SEED — записи, которые вы добавляете вручную (видны всем даже без сервера):
+   {n:'Имя', t:'Текст записи', d:'2026-10-22'}
+============================================================ */
+var GB_ENDPOINT='';
+var GB_SEED=[];
+
+var h=document.documentElement;
+function $(id){return document.getElementById(id)}
+function all(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel))}
+function lang(){return h.getAttribute('data-lang')==='be'?'be':'ru'}
+
+var M={
+ need:{ru:'Впишите имя и текст записи.',be:'Упішыце імя і тэкст запісу.'},
+ wait:{ru:'Подождите несколько секунд перед следующей записью.',be:'Пачакайце некалькі секунд перад наступным запісам.'},
+ ok:{ru:'Спасибо, запись добавлена.',be:'Дзякуй, запіс дададзены.'},
+ okl:{ru:'Запись сохранена в этом браузере.',be:'Запіс захаваны ў гэтым браўзеры.'},
+ fail:{ru:'Не удалось сохранить запись. Попробуйте ещё раз позже.',be:'Не ўдалося захаваць запіс. Паспрабуйце яшчэ раз пазней.'},
+ load:{ru:'Не удалось загрузить записи. Обновите страницу.',be:'Не ўдалося загрузіць запісы. Абнавіце старонку.'},
+ empty:{ru:'Записей пока нет. Станьте первым.',be:'Запісаў пакуль няма. Будзьце першымі.'},
+ pub:{ru:'Имя, текст и дата будут видны всем, кто откроет страницу.',be:'Імя, тэкст і дата будуць бачныя ўсім, хто адкрые старонку.'},
+ loc:{ru:'Запись сохранится только на этом устройстве и в этом браузере.',be:'Запіс захаваецца толькі на гэтай прыладзе і ў гэтым браўзеры.'},
+ del:{ru:'Удалить',be:'Выдаліць'},
+ delq:{ru:'Удалить эту запись?',be:'Выдаліць гэты запіс?'},
+ more:{ru:'Ещё свечей:',be:'Яшчэ свечак:'},
+ good:{ru:'Память жива',be:'Памяць жывая'}
+};
+function tr(k){return M[k][lang()]}
+
+/* ---------- язык ---------- */
+var b1=$('bru'),b2=$('bbe');
+function ph(){all('[data-ru]').forEach(function(e){var v=e.getAttribute('data-'+lang());if(e.tagName==='INPUT'||e.tagName==='TEXTAREA')e.placeholder=v})}
+function setL(l,save){
+ h.setAttribute('data-lang',l);h.lang=l;
+ b1.setAttribute('aria-pressed',l==='ru');b2.setAttribute('aria-pressed',l==='be');
+ document.title=l==='be'?'Рамкевіч Сяргей Мацвеевіч':'Рамкевич Сергей Матвеевич';
+ ph();renderBook();showMsg();updateRes();updateNote();drawCandles();
+ if(save){try{localStorage.setItem('lang',l)}catch(e){}}
+}
+b1.onclick=function(){setL('ru',true)};
+b2.onclick=function(){setL('be',true)};
+
+/* ---------- хронология ---------- */
+var items=all('.tl .it');
+items.forEach(function(it,i){
+ var btn=it.querySelector('button'),more=it.querySelector('.more');
+ more.id='more'+i;btn.setAttribute('aria-controls',more.id);btn.setAttribute('aria-expanded','false');
+ btn.onclick=function(){var o=it.classList.toggle('open');btn.setAttribute('aria-expanded',o)};
+});
+function setAll(o){items.forEach(function(it){it.classList.toggle('open',o);it.querySelector('button').setAttribute('aria-expanded',o)})}
+$('all').onclick=function(){setAll(true)};
+$('none').onclick=function(){setAll(false)};
+if(items[0]){items[0].classList.add('open');items[0].querySelector('button').setAttribute('aria-expanded','true')}
+
+/* ---------- вкладки ---------- */
+var tabs=all('.tabs button');
+$('t1').parentNode.querySelector('.tabs').setAttribute('role','tablist');
+tabs.forEach(function(b,i){
+ var p=$(b.dataset.t);
+ b.setAttribute('role','tab');b.setAttribute('aria-controls',b.dataset.t);b.id='tab'+i;
+ p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby',b.id);
+ b.setAttribute('aria-selected',b.classList.contains('on'));b.tabIndex=b.classList.contains('on')?0:-1;
+ b.onclick=function(){selectTab(b)};
+ b.onkeydown=function(e){
+  var k=e.key,n=-1;
+  if(k==='ArrowRight')n=(i+1)%tabs.length;else if(k==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+  if(n>=0){e.preventDefault();selectTab(tabs[n]);tabs[n].focus()}
+ };
+});
+function selectTab(b){
+ tabs.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$(x.dataset.t).classList.toggle('on',on)});
+}
+
+/* ---------- карточки «нажмите» ---------- */
+all('.five button,.st .card').forEach(function(b){
+ b.setAttribute('aria-pressed','false');
+ b.onclick=function(){var o=b.classList.toggle('on');b.setAttribute('aria-pressed',o)};
+});
+
+/* ---------- фото ---------- */
+var lb=$('lb'),P=$('ph'),cl=$('cl');
+lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');
+cl.setAttribute('aria-label','Закрыть / Закрыць');
+function op(){lb.querySelector('img').src=P.src;lb.classList.add('on');cl.focus()}
+function closeLb(){if(lb.classList.contains('on')){lb.classList.remove('on');P.focus()}}
+P.onclick=op;
+P.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();op()}};
+lb.onclick=closeLb;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
+
+/* ---------- годы памяти ---------- */
+$('yrs').textContent=new Date().getFullYear()-1985;
+
+/* ---------- свечи ---------- */
+var n=0,C=$('candles');
+try{n=+localStorage.getItem('cn2')||0}catch(e){}
+function drawCandles(){
+ C.textContent='';
+ for(var i=0;i<Math.min(n,40);i++){var c=document.createElement('span');c.className='cd';C.appendChild(c)}
+ if(n>40){var m=document.createElement('span');m.className='more-c';m.textContent=tr('more')+' '+(n-40);C.appendChild(m)}
+ $('cn').textContent=n;
+}
+$('light').onclick=function(){n++;drawCandles();try{localStorage.setItem('cn2',n)}catch(e){}};
+
+/* ---------- викторина ---------- */
+var ok=0,done=0,Q=all('.q'),qr=$('qr');
+function updateRes(){
+ var r=$('res');
+ if(done===Q.length){r.textContent=ok+' / '+Q.length+(ok===Q.length?' — '+tr('good'):'')}else r.textContent='';
+}
+Q.forEach(function(q){
+ all('button',q).forEach(function(b){
+  b.onclick=function(){
+   if(q.dataset.d)return;q.dataset.d=1;done++;
+   if(b.dataset.ok){b.classList.add('ok');ok++}else{b.classList.add('no');q.querySelector('[data-ok]').classList.add('ok')}
+   updateRes();qr.hidden=done!==Q.length;
+  };
+ });
+});
+qr.onclick=function(){
+ Q.forEach(function(q){delete q.dataset.d;all('button',q).forEach(function(b){b.classList.remove('ok','no')})});
+ ok=0;done=0;updateRes();qr.hidden=true;
+};
+
+/* ---------- книга памяти ---------- */
+var remote=[],shown=10,cur=null;
+
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+function readLocal(){try{var a=JSON.parse(localStorage.getItem('gb')||'[]');return Array.isArray(a)?a:[]}catch(e){return[]}}
+function saveLocal(a){try{localStorage.setItem('gb',JSON.stringify(a));return true}catch(e){return false}}
+function valid(e){return e&&typeof e.n==='string'&&typeof e.t==='string'&&e.n.trim()&&e.t.trim()}
+function norm(e,id){return{id:String(e.id||id),n:e.n.trim().slice(0,60),t:e.t.trim().slice(0,800),d:String(e.d||'')}}
+
+function entries(){
+ var seed=GB_SEED.filter(valid).map(function(e,i){return norm(e,'s'+i)});
+ var rem=remote.filter(valid).map(function(e,i){return norm(e,'r'+i)});
+ var loc=GB_ENDPOINT?[]:readLocal().filter(valid).map(function(e,i){var x=norm(e,'l'+i);x.own=true;return x});
+ var seen={},out=[];
+ seed.concat(rem,loc).forEach(function(e){if(seen[e.id])return;seen[e.id]=1;out.push(e)});
+ out.sort(function(a,b){return (new Date(b.d)-new Date(a.d))||0});
+ return out;
+}
+var MON={
+ ru:['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'],
+ be:['студзеня','лютага','сакавіка','красавіка','мая','чэрвеня','ліпеня','жніўня','верасня','кастрычніка','лістапада','снежня']
+};
+function fmt(d){
+ var x=new Date(d);if(isNaN(x))return'';
+ return x.getDate()+' '+MON[lang()][x.getMonth()]+' '+x.getFullYear()+(lang()==='be'?' г.':' г.');
+}
+function renderBook(){
+ var box=$('gb'),list=entries();
+ box.textContent='';
+ if(!list.length){var p=document.createElement('p');p.className='note';p.textContent=tr('empty');box.appendChild(p)}
+ list.slice(0,shown).forEach(function(e){
+  var a=document.createElement('article');a.className='gbi';
+  var p=document.createElement('p');p.textContent=e.t;
+  var by=document.createElement('div');by.className='by';
+  var b=document.createElement('b');b.textContent=e.n;
+  var t=document.createElement('time');t.textContent=fmt(e.d);
+  if(!isNaN(new Date(e.d)))t.setAttribute('datetime',e.d);
+  by.appendChild(b);by.appendChild(document.createTextNode(' · '));by.appendChild(t);
+  if(e.own){
+   var del=document.createElement('button');del.type='button';del.className='del';del.textContent=tr('del');
+   del.onclick=function(){
+    if(!window.confirm(tr('delq')))return;
+    saveLocal(readLocal().filter(function(x){return String(x.id)!==e.id}));
+    renderBook();
+   };
+   by.appendChild(document.createTextNode(' · '));by.appendChild(del);
+  }
+  a.appendChild(p);a.appendChild(by);box.appendChild(a);
+ });
+ $('gmore').hidden=list.length<=shown;
+}
+$('gmore').onclick=function(){shown+=10;renderBook()};
+
+function updateNote(){$('gnote').textContent=GB_ENDPOINT?tr('pub'):tr('loc')}
+function msg(k,err){cur=k?{k:k,err:!!err}:null;showMsg()}
+function showMsg(){var m=$('gm');m.textContent=cur?tr(cur.k):'';m.className=cur&&cur.err?'err':''}
+
+var gt=$('gt'),gc=$('gc');
+gt.addEventListener('input',function(){gc.textContent=gt.value.length});
+
+function finish(e){
+ try{localStorage.setItem('gbt',Date.now())}catch(x){}
+ $('gn').value='';gt.value='';gc.textContent='0';
+ shown=10;renderBook();msg(GB_ENDPOINT?'ok':'okl',false);
+}
+$('gbf').addEventListener('submit',function(ev){
+ ev.preventDefault();
+ if($('gh').value)return;
+ var name=$('gn').value.trim(),text=gt.value.trim();
+ if(!name||!text){msg('need',true);return}
+ var last=0;try{last=+localStorage.getItem('gbt')||0}catch(x){}
+ if(Date.now()-last<20000){msg('wait',true);return}
+ var e={id:uid(),n:name.slice(0,60),t:text.slice(0,800),d:new Date().toISOString()};
+ if(!GB_ENDPOINT){
+  var a=readLocal();a.push(e);
+  if(!saveLocal(a)){msg('fail',true);return}
+  finish(e);return;
+ }
+ var btn=$('gs');btn.disabled=true;
+ fetch(GB_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({id:e.id,n:e.n,t:e.t,hp:''})})
+  .then(function(r){return r.json()})
+  .then(function(j){if(!j||!j.ok)throw new Error('rejected');remote.push(e);finish(e)})
+  .catch(function(){msg('fail',true)})
+  .then(function(){btn.disabled=false});
+});
+
+function loadRemote(){
+ if(!GB_ENDPOINT)return;
+ fetch(GB_ENDPOINT+(GB_ENDPOINT.indexOf('?')<0?'?':'&')+'action=list')
+  .then(function(r){return r.json()})
+  .then(function(a){if(Array.isArray(a)){var mine=remote;remote=a.concat(mine);renderBook()}})
+  .catch(function(){msg('load',true)});
+}
+
+/* ---------- старт ---------- */
+var sl=null;try{sl=localStorage.getItem('lang')}catch(e){}
+if(!sl&&/^be/i.test(navigator.language||''))sl='be';
+setL(sl==='be'?'be':'ru',false);
+loadRemote();
+})();
+</script>
+</body>
+</html>
